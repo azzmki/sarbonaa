@@ -3,227 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muammo & Yechim – Sarbonay</title>
-
+    <title>SarbonAI - Bozordagi muammolar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f7fa;
-        }
-
-        .section-title {
-            text-align: center;
-            padding: 25px 0;
-            font-size: 32px;
-            font-weight: bold;
-            color: #1A237E;
-        }
-
-        .problem-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 25px;
-            padding: 20px 50px;
-        }
-
-        .problem-card {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-
-        .problem-card img {
-            width: 70px;
-            margin-bottom: 12px;
-        }
-
-        .problem-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 6px;
-            color: #263238;
-        }
-
-        .problem-desc {
-            font-size: 15px;
-            color: #455A64;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-box {
-            width: 600px;
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            animation: fadeIn 0.35s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.85); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .close-btn {
-            float: right;
-            font-size: 22px;
-            cursor: pointer;
-            color: #444;
-        }
-
-        .solution-header {
-            font-size: 26px;
-            font-weight: bold;
-            color: #1B5E20;
-            margin-bottom: 10px;
-        }
-
-        .modal-img {
-            width: 100%;
-            border-radius: 10px;
-            margin: 12px 0;
-        }
-
-        .solution-text {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #37474F;
-        }
+        body { margin:0; font-family:'Inter',sans-serif; background:#f8fafc; color:#1e293b; }
+        .container { max-width:1200px; margin:0 auto; padding:80px 20px; }
+        h2 { font-size:42px; text-align:center; margin-bottom:70px; }
+        h2 span { color:#3b82f6; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:40px; }
+        .card { background:white; border-radius:16px; padding:40px 32px; box-shadow:0 10px 25px rgba(0,0,0,0.06); border:1px solid #e2e8f0; position:relative; transition:all 0.3s ease; text-decoration:none; color:inherit; }
+        .card:hover { transform:translateY(-12px); box-shadow:0 25px 50px rgba(0,0,0,0.15); }
+        .num { position:absolute; top:-10px; right:-10px; background:#3b82f6; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:28px; font-weight:700; }
+        .card h3 { font-size:22px; color:#1e40af; margin:0 0 16px 0; }
+        .card p { color:#475569; margin:0; }
+        .back-home { display:block; text-align:center; margin:60px auto 0; padding:14px 36px; background:#3b82f6; color:white; text-decoration:none; border-radius:50px; width:fit-content; font-weight:600; }
     </style>
 </head>
 <body>
 
-    <h2 class="section-title">Ayni vaqtda mavjud bo'lgan muammolar</h2>
+<div class="container">
+    <h2>Bozorda hali hal qilinmagan <span>5 ta katta muammo</span></h2>
 
-    <div class="problem-container">
-
-        <!-- 1 -->
-        <div class="problem-card" onclick="openModal(1)">
-            <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-tourism-travel-flatart-icons-flat-flatarticons.png">
-            <div class="problem-title">1. Agentliklarda qo‘lda ishlash ko‘pligi</div>
-            <div class="problem-desc">Bronlar, paket tanlash va mijoz bilan ishlash jarayoni juda sust, inson omiliga bog‘liq.</div>
-        </div>
-
-        <!-- 2 -->
-        <div class="problem-card" onclick="openModal(2)">
-            <img src="https://img.icons8.com/fluency/344/error.png">
-            <div class="problem-title">2. Xatolik va noto‘g‘ri bronlar</div>
-            <div class="problem-desc">Qayta tekshirilmagan bronlar tufayli mijozlar shikoyati ko‘payadi.</div>
-        </div>
-
-        <!-- 3 -->
-        <div class="problem-card" onclick="openModal(3)">
-            <img src="https://img.icons8.com/color/344/timer.png">
-            <div class="problem-title">3. 24/7 xizmat mavjud emas</div>
-            <div class="problem-desc">Agentliklar tunu-kun qo‘llab-quvvatlash bera olmaydi.</div>
-        </div><!-- 4 -->
-        <div class="problem-card" onclick="openModal(4)">
-            <img src="https://img.icons8.com/emoji/344/globe-showing-asia-australia-emoji.png">
-            <div class="problem-title">4. To‘g‘ri turpaket topish qiyin</div>
-            <div class="problem-desc">Sayyohlar o‘ziga mos yo‘nalish topishda qiynaladi.</div>
-        </div>
-
-        <!-- 5 -->
-        <div class="problem-card" onclick="openModal(5)">
-            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-payment-shopping-and-commerce-flaticons-lineal-color-flat-icons.png">
-            <div class="problem-title">5. To‘lovlar va xavfsizlik muammolari</div>
-            <div class="problem-desc">Firibgarlik, to‘lovlar noto‘g‘ri tushishi kabi muammolar mavjud.</div>
-        </div>
+    <div class="grid">
+        <a href="solution-1.html" class="card">
+            <div class="num">1</div>
+            <h3>Qo‘lda bajariladigan og‘ir jarayonlar</h3>
+            <p>Tur yaratish, narx izlash, hujjatlashtirish — hammasi qo‘l mehnati bilan...</p>
+        </a>
+        <a href="solution-2.html" class="card">
+            <div class="num">2</div>
+            <h3>Birlashtirilmagan tizimlar</h3>
+            <p>6–10 ta alohida platforma bilan ishlash...</p>
+        </a>
+        <a href="solution-3.html" class="card">
+            <div class="num">3</div>
+            <h3>Shaxsiy preferensiyalarni hisobga olmaslik</h3>
+            <p>“Hamma uchun bir xil paket” muammosi...</p>
+        </a>
+        <a href="solution-4.html" class="card">
+            <div class="num">4</div>
+            <h3>Ishonch va xavfsizlik muammosi</h3>
+            <p>Aldanish, pullar qaytmasligi, soxta agentliklar...</p>
+        </a>
+        <a href="solution-5.html" class="card">
+            <div class="num">5</div>
+            <h3>24/7 qo‘llab-quvvatlashning yo‘qligi</h3>
+            <p>Tunda hech kim javob bermaydi...</p>
+        </a>
     </div>
 
-
-    <!-- SOLUTION MODALS -->
-    <div id="modal1" class="modal">
-        <div class="modal-box">
-            <span class="close-btn" onclick="closeModal(1)">✖️</span>
-            <div class="solution-header">Sarbonay tomonidan yechim</div>
-            <img class="modal-img" src="https://placehold.co/600x300">
-            <p class="solution-text">
-                Sarbonay AI butun agentlik operatsiyalarini avtomatlashtiradi:
-                • Avtomatik turpaket yaratish  
-                • Avtomatik bron  
-                • Mijoz ehtiyojiga mos AI tavsiyalar  
-                • Jarayonlar 10 baravar tezlashadi
-            </p>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-box">
-            <span class="close-btn" onclick="closeModal(2)">✖️</span>
-            <div class="solution-header">Sarbonay tomonidan yechim</div>
-            <img class="modal-img" src="https://placehold.co/600x300">
-            <p class="solution-text">
-                Sarbonay AI real vaqt rejimida xatolarni aniqlaydi, tekshiradi va bronlarni validatsiya qiladi.  
-                Xatoliklar 95% ga kamayadi.
-            </p>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-box">
-            <span class="close-btn" onclick="closeModal(3)">✖️</span>
-            <div class="solution-header">Sarbonay tomonidan yechim</div>
-            <img class="modal-img" src="https://placehold.co/600x300">
-            <p class="solution-text">
-                24/7 AI chat-assistent: savollar, marshrutlar, bron yangilanishlari, qo‘llab-quvvatlash — hammasi avtomatik.
-            </p>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal">
-        <div class="modal-box">
-            <span class="close-btn" onclick="closeModal(4)">✖️</span>
-            <div class="solution-header">Sarbonay tomonidan yechim</div>
-            <img class="modal-img" src="https://placehold.co/600x300">
-            <p class="solution-text">
-                Sarbonay foydalanuvchi profili, budjeti, qiziqishlari va faslga qarab eng mos turpaketni AI yordamida tavsiya qiladi.
-            </p>
-        </div>
-    </div>
-
-    <div id="modal5" class="modal">
-        <div class="modal-box">
-            <span class="close-btn" onclick="closeModal(5)">✖️</span>
-            <div class="solution-header">Sarbonay tomonidan yechim</div>
-            <img class="modal-img" src="https://placehold.co/600x300">
-            <p class="solution-text">
-                Sarbonay AI to‘lovlarni himoyalangan kanallar orqali qayta ishlaydi.  
-                Fraud-detection tizimi firibgarlikni oldini oladi.
-            </p>
-        </div>
-    </div>
-
-
-    <script>
-        function openModal(id) {
-            document.getElementById("modal" + id).style.display = "flex";
-        }
-
-        function closeModal(id) {
-            document.getElementById("modal" + id).style.display = "none";
-        }
-    </script>
+    <a href="index.html" class="back-home">← Bosh sahifaga qaytish</a>
+</div>
 
 </body>
 </html>
