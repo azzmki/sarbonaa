@@ -1,69 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SarbonAI — AI Travel Automation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarbonay – AI Travel Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-50 font-sans scroll-smooth">
 
-<body>
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="font-bold text-xl text-indigo-600">Sarbonay</h1>
+    <div class="space-x-4 text-gray-700 font-medium flex items-center">
+      <a href="#home" class="nav-link hover:text-indigo-600" data-key="home">Home</a>
+      <a href="#problems" class="nav-link hover:text-indigo-600" data-key="problems">Problems & Solutions</a>
+      <a href="#team" class="nav-link hover:text-indigo-600" data-key="team">Team</a>
+      <a href="#teampower" class="nav-link hover:text-indigo-600" data-key="teampower">Team Power</a>
+      <a href="#roadmap" class="nav-link hover:text-indigo-600" data-key="roadmap">Roadmap</a>
+      <a href="#howwe" class="nav-link hover:text-indigo-600" data-key="howwe">How We Solve</a>
+      <a href="#contact" class="nav-link hover:text-indigo-600" data-key="contact">Contact</a>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="logo">
-        <img src="logo-sarbonai.png" alt="SarbonAI Logo">
-        <span>SarbonAI</span>
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="index.html" data-key="home">Home</a></li>
-        <li><a href="about.html" data-key="about">About</a></li>
-        <li><a href="problem.html" data-key="problem">Problems</a></li>
-        <li><a href="roadmap.html" data-key="roadmap">Roadmap</a></li>
-        <li><a href="team.html" data-key="team">Team</a></li>
-        <li><a href="contact.html" data-key="contact">Contact</a></li>
-    </ul>
-
-    <!-- Language Switcher -->
-    <select id="lang-switcher">
-        <option value="uz">UZ</option>
-        <option value="ru">RU</option>
-        <option value="en">EN</option>
-    </select>
-</nav>
-
-<!-- ================= HERO SECTION ================= -->
-<header class="hero">
-    <h1 data-key="hero_title">SarbonAI — Sun’iy Intellektga asoslangan sayohat ekotizimi</h1>
-    <p data-key="hero_subtitle">
-        Turizm sohasining kelajagi — avtomatlashtirilgan, xavfsiz, shaxsiylashtirilgan va inson omilisiz ishlaydigan AI Travel Platform.
-    </p>
-    <button class="btn" onclick="location.href='about.html'" data-key="learn_more">Batafsil</button>
-</header>
-
-<!-- ================= ABOUT SARBONAI ================= -->
-<section class="about">
-    <h2 data-key="about_title">SarbonAI nima?</h2>
-    <p data-key="about_text">
-        SarbonAI — turizm sohasini to‘liq raqamlashtiruvchi AI ekotizim. Sun’iy intellekt yordamida 
-        turpaket yaratish, bron qilish, yo‘l rejalari, shaxsiy tavsiyalar va 24/7 yordamchi xizmatini
-        avtomatlashtiradi. Kelajakda SarbonAI sayyohlik agentliklari faoliyatini to‘liq almashtira oladigan
-        mustaqil AI Travel SuperPlatformga aylanadi.
-    </p>
-
-    <div class="moto-box">
-        <h3 data-key="motto">Bizning shior — “Kelajak yo‘lida aqlli sayohat!”</h3>
-        <h4 data-key="mission">Missiya: Turizmning har bir bosqichiga AI kiritish.</h4>
-    </div>
-</section>
-
-<!-- ================= FUTURESTARS TEAM LOGO ================= -->
-<section class="team-logo">
-    <img src="futurestars-logo.png" alt="FutureStars Team">
-    <h3 data-key="futurestars_text">FutureStars — SarbonAI’ning asosiy muhandislari va g‘oyaning asoschilari</h3>
-</section>
       <!-- Language Selector -->
       <select id="languageSelector" class="ml-4 border rounded px-2 py-1">
         <option value="uz">UZ</option>
@@ -74,148 +31,16 @@
   </div>
 </nav>
 
-<!-- ===== SarbonAI HOME PAGE ===== -->
-<section id="home" class="hero">
-    <div class="language-switch">
-        <button onclick="setLang('uz')">UZ</button>
-        <button onclick="setLang('en')">EN</button>
-        <button onclick="setLang('ru')">RU</button>
-    </div>
-
-    <div class="hero-content">
-        <img src="sarbonai_logo.png" class="logo" alt="SarbonAI Logo">
-
-        <h1 class="title lang uz">SarbonAI — Sayyohlikning Kelajagi</h1>
-        <h1 class="title lang en hidden">SarbonAI — The Future of Travel</h1>
-        <h1 class="title lang ru hidden">SarbonAI — Будущее туризма</h1>
-
-        <p class="subtitle lang uz">
-            Biz sunʼiy intellekt asosida sayyohlik jarayonlarini toʻliq raqamlashtiramiz.
-        </p>
-        <p class="subtitle lang en hidden">
-            We digitize the entire tourism ecosystem with advanced AI.
-        </p>
-        <p class="subtitle lang ru hidden">
-            Мы полностью цифровизируем туристическую отрасль с помощью ИИ.
-        </p>
-
-        <div class="team-box">
-            <img src="futurestars_logo.png" class="team-logo" alt="FutureStars Logo">
-            <p class="team-text">FutureStars Team</p>
-            <span class="team-motto">“Tech. Innovate. Lead.”</span>
-        </div>
-
-        <a href="#contact" class="scroll-down">⬇️ Contact</a>
-    </div>
-</section> 
-    <style>
-        /* HERO SECTION */
-.hero {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(135deg, #001f3f, #003366, #0055aa);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Glass effect box */
-.hero-content {
-    text-align: center;
-    color: white;
-    padding: 40px;
-    border-radius: 25px;
-    backdrop-filter: blur(12px);
-    background: rgba(255,255,255,0.06);
-    box-shadow: 0 0 30px rgba(255,255,255,0.12);
-    width: 90%;
-    max-width: 800px;
-}
-
-/* Logos */
-.logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-.team-logo {
-    width: 80px;
-}
-
-.title {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
-
-.subtitle {
-    font-size: 20px;
-    opacity: 0.9;
-    margin-bottom: 25px;
-}
-
-/* Team box */
-.team-box {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(255,255,255,0.09);
-    border-radius: 20px;
-    display: inline-block;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
-}
-
-.team-text {
-    margin-top: 10px;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.team-motto {
-    display: block;
-    font-size: 16px;
-    opacity: 0.8;
-}
-
-/* Scroll down */
-.scroll-down {
-    margin-top: 40px;
-    display: inline-block;
-    color: white;
-    font-size: 25px;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-.scroll-down:hover {
-    opacity: 1;
-}
-
-/* Language switcher */
-.language-switch {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-}
-.language-switch button {
-    background: rgba(255,255,255,0.15);
-    padding: 8px 15px;
-    margin-left: 5px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    backdrop-filter: blur(12px);
-    font-weight: 600;
-}
-.language-switch button:hover {
-    background: rgba(255,255,255,0.3);
-}
-
-/* Hide for languages */
-.hidden {
-    display: none;
-} 
-        </style>
+<!-- Home Section -->
+<section id="home" class="pt-28 pb-20 text-center bg-indigo-50">
+  <h1 class="text-5xl font-bold text-indigo-700 mb-4" data-key="homeTitle">Sarbonay AI Travel Automation</h1>
+  <p class="text-gray-700 max-w-3xl mx-auto text-lg" data-key="homeDesc">
+    Sun'iy intellekt yordamida sayyohlik agentliklari va tur-operatorlar uchun barcha xizmatlarni avtomatlashtiradi.
+  </p>
+  <div class="mt-8">
+    <a href="#problems" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition" data-key="learnMore">Learn More</a>
+  </div>
+</section>
 
 <!-- Problems & Solutions Section -->
 <section id="problems" class="pt-28 pb-20 text-center">
@@ -451,6 +276,7 @@
 
 </body>
 </html>
+
 
 
 
