@@ -2,29 +2,68 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SarbonAI Travel Automation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SarbonAI — AI Travel Automation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 font-sans scroll-smooth">
-  
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="font-bold text-xl text-indigo-600">SarbonAI</h1>
-    <div class="space-x-4 text-gray-700 font-medium flex items-center">
-      <a href="#home" class="nav-link hover:text-indigo-600" data-key="home">Home</a>
-      <a href="#problems" class="nav-link hover:text-indigo-600" data-key="problems">Problems & Solutions</a>
-      <p> 
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="logo-sarbonai.png" alt="SarbonAI Logo">
+        <span>SarbonAI</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" data-key="home">Home</a></li>
+        <li><a href="about.html" data-key="about">About</a></li>
+        <li><a href="problem.html" data-key="problem">Problems</a></li>
+        <li><a href="roadmap.html" data-key="roadmap">Roadmap</a></li>
+        <li><a href="team.html" data-key="team">Team</a></li>
+        <li><a href="contact.html" data-key="contact">Contact</a></li>
+    </ul>
+
+    <!-- Language Switcher -->
+    <select id="lang-switcher">
+        <option value="uz">UZ</option>
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+    </select>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<header class="hero">
+    <h1 data-key="hero_title">SarbonAI — Sun’iy Intellektga asoslangan sayohat ekotizimi</h1>
+    <p data-key="hero_subtitle">
+        Turizm sohasining kelajagi — avtomatlashtirilgan, xavfsiz, shaxsiylashtirilgan va inson omilisiz ishlaydigan AI Travel Platform.
     </p>
-      <a href="#team" class="nav-link hover:text-indigo-600" data-key="team">Team</a>
-      <a href="#teampower" class="nav-link hover:text-indigo-600" data-key="teampower">Team Power</a>
-      <a href="#roadmap" class="nav-link hover:text-indigo-600" data-key="roadmap">Roadmap</a>
-      <a href="#howwe" class="nav-link hover:text-indigo-600" data-key="howwe">How We Solve</a>
-      <a href="#contact" class="nav-link hover:text-indigo-600" data-key="contact">Contact</a>
+    <button class="btn" onclick="location.href='about.html'" data-key="learn_more">Batafsil</button>
+</header>
 
+<!-- ================= ABOUT SARBONAI ================= -->
+<section class="about">
+    <h2 data-key="about_title">SarbonAI nima?</h2>
+    <p data-key="about_text">
+        SarbonAI — turizm sohasini to‘liq raqamlashtiruvchi AI ekotizim. Sun’iy intellekt yordamida 
+        turpaket yaratish, bron qilish, yo‘l rejalari, shaxsiy tavsiyalar va 24/7 yordamchi xizmatini
+        avtomatlashtiradi. Kelajakda SarbonAI sayyohlik agentliklari faoliyatini to‘liq almashtira oladigan
+        mustaqil AI Travel SuperPlatformga aylanadi.
+    </p>
+
+    <div class="moto-box">
+        <h3 data-key="motto">Bizning shior — “Kelajak yo‘lida aqlli sayohat!”</h3>
+        <h4 data-key="mission">Missiya: Turizmning har bir bosqichiga AI kiritish.</h4>
+    </div>
+</section>
+
+<!-- ================= FUTURESTARS TEAM LOGO ================= -->
+<section class="team-logo">
+    <img src="futurestars-logo.png" alt="FutureStars Team">
+    <h3 data-key="futurestars_text">FutureStars — SarbonAI’ning asosiy muhandislari va g‘oyaning asoschilari</h3>
+</section>
       <!-- Language Selector -->
       <select id="languageSelector" class="ml-4 border rounded px-2 py-1">
         <option value="uz">UZ</option>
@@ -265,6 +304,21 @@
   <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="contactTitle">Aloqa</h2>
 
   <div class="max-w-3xl mx-auto
+<!-- ================= FOOTER CONTACT ONLY ================= -->
+<footer class="footer">
+    <h2 data-key="contact_title">Biz bilan bog‘laning</h2>
+    <p>📍 Nurafshon city, Yangiobod ko‘chasi 20/2</p>
+    <p>📞 +998 97 677 04 77</p>
+    <p>📧 musayeveldor@gmail.com</p>
+    <p>🌐 www.sarbonai.ai</p>
+    <p>Telegram: @Eldorbei</p>
+</footer>
+
+
+<script src="lang.js"></script>
+
+</body>
+</html>
 
 
 
