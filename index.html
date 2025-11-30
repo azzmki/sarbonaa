@@ -8,6 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 font-sans scroll-smooth">
+  
 
 <!-- Navbar -->
 <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
@@ -16,6 +17,8 @@
     <div class="space-x-4 text-gray-700 font-medium flex items-center">
       <a href="#home" class="nav-link hover:text-indigo-600" data-key="home">Home</a>
       <a href="#problems" class="nav-link hover:text-indigo-600" data-key="problems">Problems & Solutions</a>
+      <p> hhhhhh
+    </p>
       <a href="#team" class="nav-link hover:text-indigo-600" data-key="team">Team</a>
       <a href="#teampower" class="nav-link hover:text-indigo-600" data-key="teampower">Team Power</a>
       <a href="#roadmap" class="nav-link hover:text-indigo-600" data-key="roadmap">Roadmap</a>
@@ -156,28 +159,76 @@
 </section>
 
 <!-- Roadmap & Phases Section -->
-<section id="roadmap" class="pt-28 pb-20 text-center bg-indigo-50">
-  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="roadmapTitle">Yo‘l xaritasi & bosqich</h2>
-  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
-    <div class="bg-white rounded-2xl shadow-lg p-6">
-      <h3 class="text-xl font-semibold text-indigo-600 mb-2">G‘oya</h3>
-      <p class="text-gray-700">Tizim konseptini ishlab chiqish va bozor tadqiqotini boshlash</p>
+
+<!-- SarbonAI Roadmap Timeline Section -->
+<!-- SarbonAI Premium Roadmap Timeline (Animated, Iconic, Premium UI) -->
+<section id="roadmap" style="font-family: 'Inter', sans-serif; padding: 80px 20px; background: linear-gradient(135deg, #eef3ff, #f9fbff);">
+  <h2 style="text-align:center; font-size: 42px; margin-bottom: 60px; color:#0a1a3c; font-weight:800; letter-spacing:1px;">SarbonAI Roadmap Timeline</h2>
+
+  <div class="timeline-container" style="position: relative; margin: 0 auto; max-width: 950px;">
+
+    <!-- Vertical gradient line -->
+    <div style="content:''; position: absolute; left: 50%; transform: translateX(-50%); top: 0; width: 6px; height: 100%; background: linear-gradient(#005dff, #001b44); border-radius: 8px; opacity:0.4;"></div>
+
+    <!-- PREMIUM TIMELINE ITEM TEMPLATE -->
+    <style>
+      .tl-item { position: relative; width: 100%; margin: 70px 0; }
+      .tl-card { background: white; border-radius: 18px; padding: 28px 32px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); transition: 0.3s ease; border-left: 6px solid #005dff; }
+      .tl-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+      .tl-icon { position: absolute; left: 50%; transform: translateX(-50%); top: -22px; width: 55px; height: 55px; background: #005dff; border-radius: 50%; border: 5px solid #fff; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.15); animation: pop 0.6s ease; }
+      .tl-icon img { width: 28px; height:28px; filter: brightness(0) invert(1); }
+      .tl-title { font-size: 24px; font-weight:700; color:#003b85; margin-bottom:10px; }
+      .tl-text { font-size: 17px; color:#333; line-height:1.55; }
+
+      @keyframes pop { 0%{transform:translateX(-50%) scale(0.5);} 100%{transform:translateX(-50%) scale(1);} }
+    </style>
+
+    <!-- ITEM 1 -->
+    <div class="tl-item">
+      <div class="tl-icon"><img src="https://cdn-icons-png.flaticon.com/512/4080/4080032.png"></div>
+      <div class="tl-card" style="margin-left: 55%;">
+        <h3 class="tl-title">2025–2026 — AI Travel Core Engine</h3>
+        <p class="tl-text">SarbonAI sayohatni rejalash, narxlarni solishtirish, marshrut yaratish va turpaketni avtomatik yig‘ish funksiyalarini bajaruvchi birinchi avlod "AI Travel Engine"ni ishga tushiradi.</p>
+      </div>
     </div>
-    <div class="bg-white rounded-2xl shadow-lg p-6">
-      <h3 class="text-xl font-semibold text-indigo-600 mb-2">Prototip</h3>
-      <p class="text-gray-700">AI modulini va interfeys dizaynini prototip sifatida yaratish</p>
+
+    <!-- ITEM 2 -->
+    <div class="tl-item">
+      <div class="tl-icon" style="background:#004bcc;"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png"></div>
+      <div class="tl-card" style="margin-right: 55%; border-color:#004bcc;">
+        <h3 class="tl-title" style="color:#004bcc;">2027–2029 — AI Travel Agent Replacement</h3>
+        <p class="tl-text">SarbonAI agentlikning barcha jarayonlarini mustaqil bajara oladi: mijozga xizmat, bron qilish, shartnoma, narx kelishuvi, chat-assistent, qo‘llab-quvvatlash — to‘liq AI tomonidan.</p>
+      </div>
     </div>
-    <div class="bg-white rounded-2xl shadow-lg p-6">
-      <h3 class="text-xl font-semibold text-indigo-600 mb-2">MVP</h3>
-      <p class="text-gray-700">Minimal funksional ilova va web sahifani ishga tushirish</p>
+
+    <!-- ITEM 3 -->
+    <div class="tl-item">
+      <div class="tl-icon" style="background:#003f99;"><img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png"></div>
+      <div class="tl-card" style="margin-left: 55%; border-color:#003f99;">
+        <h3 class="tl-title" style="color:#003f99;">2030–2034 — Regional Digital Monopoly</h3>
+        <p class="tl-text">SarbonAI Markaziy Osiyo bozorida raqamlashtirilgan sayyohlik xizmatlarining yetakchisiga aylanadi. Bozor ulushi: 20–25%. Agentliklar tizimi SarbonAI ekotizimiga integratsiyalanadi.</p>
+      </div>
     </div>
-    <div class="bg-white rounded-2xl shadow-lg p-6">
-      <h3 class="text-xl font-semibold text-indigo-600 mb-2">Ishga tushirilgan</h3>
-      <p class="text-gray-700">Bozorga chiqarish va foydalanuvchi tajribasini kuzatish</p>
+
+    <!-- ITEM 4 -->
+    <div class="tl-item">
+      <div class="tl-icon" style="background:#001f66;"><img src="https://cdn-icons-png.flaticon.com/512/871/871389.png"></div>
+      <div class="tl-card" style="margin-right: 55%; border-color:#001f66;">
+        <h3 class="tl-title" style="color:#001f66;">2035–2038 — Global AI Expansion</h3>
+        <p class="tl-text">SarbonAI global bozorlarga chiqish strategiyasini boshlaydi. 40 dan ortiq davlatda AI travel marketplace ishga tushadi. Ulush: 5–7%.</p>
+      </div>
     </div>
-  </div>
-  <div class="mt-12 text-gray-700 max-w-3xl mx-auto">
-    <p class="text-lg">Keyingi qadamlar: AI modullarini takomillashtirish, ichki va tashqi bozorlarni kengaytirish, foydalanuvchi tajribasini optimallashtirish va global miqyosga chiqish.</p>
+
+
+<!-- ITEM 5 -->
+    <div class="tl-item">
+      <div class="tl-icon" style="background:#000f33;"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208712.png"></div>
+      <div class="tl-card" style="margin-left: 55%; border-color:#000f33;">
+        <h3 class="tl-title" style="color:#000f33;">2038–2040 — Full AI Travel Ecosystem</h3>
+        <p class="tl-text">SarbonAI — to‘liq avtonom AI Travel Ekotizimi. AI agentlik, AI marketing, AI booking, AI xizmat ko‘rsatish — barchasi bir ekotizimda. Global ulush: 10–12%.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -213,4 +264,5 @@
 <!-- Contact Section -->
 <section id="contact" class="pt-28 pb-20 text-center bg-gray-100">
   <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="contactTitle">Aloqa</h2>
+
   <div class="max-w-3xl mx-auto
